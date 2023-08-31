@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit your Code here</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/codemirror@5.62.0/lib/codemirror.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/theme/dracula.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/python/python.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto mt-8">
+        <div class="h-20 bg-black mb-4 rounded-lg flex flex-row items-center">
+            <h1 class="text-2xl font-semibold text-green-100 px-4 py-2">Edit your code here</h1>
+            <!--The buttons to edit and save the code-->
+            <div class="ml-auto flex">
+                <button type="button" class="bg-green-500 hover:bg-green-600
+                 text-white px-5 py-2 rounded text-xl mr-10" style="background-color: #A7ED6F;">
+                    Save
+                </button>
+                <button type="button" class="bg-green-500 hover:bg-green-600
+                 text-white px-6 py-2 rounded text-xl mr-10" style="background-color: #A7ED6F;">
+                    Run
+                </button>
+                <button id="exit" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded text-xl mr-10"
+                style="background-color: #A7ED6F;">
+                  Exit
+                </button>
+            </div>
+        </div>
+        
+        
+       
+      
+        <div class="bg-black rounded-lg shadow p-4 " style="height: 800px;">
+          
+        <!--The area where to edit the code starts here-->
+        <div class="bg-black rounded-lg shadow p-4 mt-10">
+        <textarea id="code-editor" style="height: 700px;">
+          
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <title>My Dummy Page</title>
+            </head>
+            <body>
+                <header>
+                    <h1>Welcome to My Dummy Page</h1>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                </header>
+                
+                <main>
+                    <section>
+                        <h2>About Us</h2>
+                        <p>We are a fictional company that specializes in creating dummy content.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>Our Services</h2>
+                        <ul>
+                            <li>Content Generation</li>
+                            <li>Web Design</li>
+                            <li>Graphic Design</li>
+                        </ul>
+                    </section>
+                </main>
+                
+                <footer>
+                    <p>&copy; 2023 My Dummy Page. All rights reserved.</p>
+                </footer>
+            </body>
+            </html>
+            
+            </textarea>
+        </div>
+            
+            
+            
+      <!--The area where to edit the code ends here-->
+            
+        </div>
+        <div class="mt-10">
+
+        </div>
+    </div>
+
+
+    <script>
+        // Initialize Prism.js on the textarea
+        Prism.highlightAll();
+      </script>
+
+<script>
+    var editor = CodeMirror.fromTextArea(document.getElementById("code-editor"), {
+      lineNumbers: true,
+      mode: "python",
+      theme: "dracula"
+    });
+  </script>
+  
+</body>
+</html>

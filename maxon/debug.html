@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug code</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/theme/dracula.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/python/python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto mt-8">
+        <div class="h-20 bg-black mb-4 rounded-lg flex flex-row items-center">
+            <h1 class="text-2xl font-semibold text-green-100 px-4 py-2">Let me debug your code</h1>
+            <div class="ml-auto flex">
+                <button id="executeButton" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded text-xl mr-10"
+                        style="background-color: #A7ED6F;">
+                    Execute Code
+                </button>
+                <button id="save" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded text-xl mr-10"
+                style="background-color: #A7ED6F;">
+                  Save
+                </button>
+                <button id="exit" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded text-xl mr-10"
+                style="background-color: #A7ED6F;">
+                  Exit
+                </button>
+            </div>
+        </div>
+
+        <div class="bg-black rounded-lg shadow p-4 " style="height: 800px;">
+            <div class="bg-black rounded-lg shadow p-4 mt-10">
+                <textarea id="codeInput" style="height: 700px;">
+                
+                    // Enter this code into the textarea and click the "Execute Code" button
+
+                    const a = 5;
+                    const b = 10;
+                    const sum = a + b;
+                    sum;
+                
+                </textarea>
+              
+
+            </div>
+
+            <h2 class="text-white text-2xl">Output:</h2>
+            <pre class="text-white text-xl" id="output">12</pre>
+           
+        </div>
+       
+        <div class="mb-10">
+
+        </div>
+    </div>
+
+    <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById("codeInput"), {
+            lineNumbers: true,
+            mode: "python",
+            theme: "dracula"
+        });
+    </script>
+</body>
+</html>
