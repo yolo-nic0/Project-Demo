@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up</title>
+<link rel="stylesheet" href="form.css">
+</head>
+<body>
+<div class="big-main">
+    <div class="over-lay">
+        <div class="sign-up-form">
+          <h1>Sign Up</h1>
+        
+          <div class="in-put">
+              <fieldset>
+                <input type="text" name="username" id="username" required>
+                <label for="username">Username</label>
+              </fieldset>
+              <fieldset>
+                <input type="email" name="email" id="email" required>
+                <label for="email">Email</label>
+              </fieldset>
+              <fieldset>
+                <input type="password" name="password" id="password" required>
+                <label for="password">Password</label>
+              </fieldset>
+              <fieldset>
+                <input type="password" name="confirm_password" id="confirm_password" required>
+                <label for="confirm_password">Confirm Password</label>
+              </fieldset>
+              <fieldset>
+                <!-- <img class="picture" src="https://source.unsplash.com/random"> -->
+                <!-- <label for="picture">Profile Picture</label> -->
+                <input type="file"  class="cho" name="picture" id="picture">
+              </fieldset>
+          </div>
+        
+          <button type="submit">Sign Up</button>
+        </div>
+    </div>
+</div>
+<script src="js/form.js"></script>
+</body>
+</html>

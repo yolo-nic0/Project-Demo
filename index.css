@@ -1,0 +1,647 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two:wght@400;');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two:wght@400;');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: var(--font2-col);
+}
+body{
+	background: var(--back-col);
+}
+:root{
+	--accent-col: #FFFFFF;
+	--black-col: #171617;
+	--back-col: #0f0f0f;
+	--suc-col: #A7ED6F;
+	--error-col: #EF6E6F;
+	--text-col: #FBFAFB;
+	--dimtext-col: #7B7A7B;
+	--prim1-col: #AF6EED;
+	--prim2-col: #CCA4F5;
+	--sec1-col: #C70557;
+	--sec2-col: #FA569C;
+	--font1-col: 'Space Grotesk', sans-serif;
+	--font2-col: 'Ubuntu', sans-serif;
+	--gradient-col: linear-gradient(to right top, #fa569c, #f057b1, #e15cc7, #cc64db, #af6eed);
+	--borderRadiusBtn-col: 83% 0% 75% 0% / 59% 79% 55% 77% ;
+}
+/* common properties */
+p, a{
+	color: var(--dimtext-col);
+}
+a{
+	text-decoration: none;
+}
+h1, h2, h3{
+	color: var(--text-col);
+}
+/* login popup */
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: .3rem solid var(--suc-col);
+	border-radius: 1rem;
+    z-index: 10;
+    background: var(--black-col);
+    width: 500%;
+    height: 70%;
+    max-width: 60%;
+    display: flex;
+    justify-content: space-between;
+	box-shadow: 0px 0px 50px 0px var(--suc-col);
+
+}
+.modal.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+.modal .legs{
+    width: 50%;
+    height: 100%;
+}
+.modal .legs{
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background: url(assets/login-animate.svg);
+
+}
+.modal .heads{
+    width: 50%;
+    height: 100%;
+    display: block;
+	overflow: hidden;
+}
+.modal .heads .done{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    padding: 0 1rem;
+    justify-content: space-between;
+}
+/* logi page */
+.close-button{
+	margin-top: 1rem;
+	width: 2rem;
+	height: 2rem;
+	background: transparent;
+	border-radius: 50%;
+	font-weight: 600;
+	color: var(--suc-col);
+}
+.close-button:hover{
+	background: #7B7A7B;
+}
+.login-form {
+	width: 300px;
+	margin: 0 auto;
+	margin-top: 2rem;
+	padding: 20px;
+  }
+  
+  .login-form fieldset {
+	border: none;
+  }
+  .login-form h1{
+	text-align: center;
+	margin-bottom: 1rem;
+  }
+  .login-form input {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	outline: none;
+	color: #171617;
+  }
+  .login-form label span{
+	padding-right: 1rem;
+	width: 7rem;
+  }
+  
+  .login-form label {
+	font-size: 16px;
+	color: var(--dimtext-col);
+	visibility: visible;
+	display: flex;
+	justify-content: space-between;
+	width: 7rem;
+  }
+  .login-form .sub-btn{
+	width: 10rem;
+	margin: 1rem 3rem;
+	background: #0f0f0f;
+	color: var(--text-col);
+	font-weight: 600;
+	border: .1rem solid var(--suc-col);
+	border-radius: .5rem;
+	transition: 200ms ease-in-out;
+  }	
+
+  .login-form .sub-btn:hover{
+	box-shadow: 5px 5px 5px 2px var(--suc-col);  }
+    
+  .login-form input:invalid + label {
+	color: red;
+  }
+  
+  .login-form input:empty + label {
+	color: #999;
+  }
+	
+#over-lay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    background: rgba(0, 0, 0, .5);
+    pointer-events: none;
+    transition: 200ms ease-in-out;
+}
+#over-lay.active{
+    opacity: 1;
+    backdrop-filter: blur(1rem);
+    pointer-events: all;
+}
+    /* login popup */
+/* nav design */
+header{
+	position: sticky;
+	top: 0;
+	background: var(--back-col);
+	z-index: 1;
+	height: 3rem;
+	width: 100%;
+	padding: 0 1rem;
+}
+nav{
+	background: var(--black-col);
+	display: flex;
+	justify-content: space-between;
+	border-bottom-right-radius: .5rem;
+	border-bottom-left-radius: .5rem;
+	transition: 0.4s ease-in-out;
+	border-bottom: .3rem solid var(--suc-col);
+}
+nav h3{
+    padding: 1rem 0 1rem 2rem;
+	color: var(--text-col);
+}
+
+nav h3 span{
+	color: #A7ED6F;
+}
+nav .navigation, .navigation a{
+	padding: 1rem;
+}
+
+nav .sider{
+    height: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+nav .auth{
+    padding-top: .5rem;
+    width: 7rem;
+}
+nav .auth .mango {
+	width: 7rem;
+    height: 2rem;
+	display: flex;
+	background: var(--back-col);
+	justify-content: space-between;
+	padding: 0 1rem;
+	border: .1rem solid var(--suc-col);
+	border-radius: .5rem;
+	color: var(--text-col);
+	padding-top: .5rem;
+	overflow: hidden;
+	transition: 200ms ease-in-out;
+}
+nav .auth .mango img{
+	width: 2rem;
+	height: 2rem;
+}
+nav .auth .mango:hover{
+	border: none;
+	box-shadow: 5px 5px 5px 2px var(--suc-col);
+}
+nav .menu{
+    display: none;
+    width: 2rem;
+}
+/* nav design ends */
+
+/* Content Designing */
+main{
+	width: 100%;
+	height: 100%;
+	background: var(--back-col);
+	position: relative;
+	overflow: hidden;
+}
+.content{
+	width: 100%;
+	height: 100%;
+	padding: 0 4rem;
+}
+#Home{
+	width: 100%;
+	height: 100%;
+}
+.content .title{
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	width: 100%;
+	height: 14rem;
+	padding: 0 3rem;
+}
+.content .title h1{
+	margin-top: 2rem;
+	font-size: 7vw;
+	margin-right: 3rem;
+}
+.content .title h1 span{
+	color: var(--suc-col);
+}
+.content .title .nor-btn{
+	position: absolute;
+	right: 5rem;
+	bottom: 0;
+	width: 9rem;
+	height: 2.5rem;
+	background: var(--black-col);
+	border-radius: .5rem;
+	border: .1rem solid var(--suc-col);
+	display: flex;
+	justify-content: space-between;
+	padding-left: 1rem;
+    transition: 200ms ease-in-out;
+}
+.content .title .nor-btn:hover{
+	border: none;
+	color: var(--suc-col);
+	box-shadow: 5px 5px 5px 2px var(--suc-col);
+}
+.content .title .nor-btn a, #some3 .sec2 .secpar1 .but-btn .gen2 a{
+	font-weight: 700;
+	color: var(--text-col);
+}
+.content .title .nor-btn a img, #some3 .sec2 .secpar1 .but-btn .gen2 a img{
+	width: 1.5rem;
+	margin-left: .5rem;
+}
+.ditail{
+	margin-top: 4rem;
+	display: flex;
+	width: 100%;
+	height: 5rem;
+	justify-content: space-arround;
+}
+.ditail .vid-btn, #some3 .sec2 .secpar1 .but-btn .gen{
+	width: 10rem;
+	height: 2.5rem;
+	margin-right: 1rem;
+	margin-bottom: 1rem;
+	background: var(--suc-col);
+	border-radius: .5rem;
+	font-weight: 700;
+	border: .1rem solid var(--accent-col);
+	display: flex;
+	justify-content: space-between;
+	padding-left: .2rem;
+}
+.ditail .vid-btn a{
+	font-weight: 700;
+	color: var(--back-col);
+}
+.ditail .vid-btn a img{
+	fill: var(--accent-col);
+	width: 1.5rem;
+	margin-RIGHT: .5rem;
+}
+.ditail .text1{
+	margin-left: 1rem;
+	padding-top: 1rem;
+	padding-right: 3rem;
+}
+.image{
+	margin: 5rem 0;
+	width: 100%;
+	height: 35rem;
+	background: transparent;
+	box-shadow: 0px 0px 70px 0px var(--suc-col);
+}
+.image img{
+	width: 100%;
+	height: 100%;
+}
+.sponsers{
+	width: 100%;
+	height: 5rem;
+	background: var(--black-col);
+	text-align: center;
+	text-justify: center;
+	margin: 5rem 0;
+}
+#some0{
+	width: 100%;
+	height: 25rem;
+	margin: 5rem 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+#some0 .context{
+	width: 60%;
+	padding: 1.5rem;
+}
+#some0 .context h2{
+	font-size: 4vw;
+	margin-bottom: 3rem;
+}
+#some0 .context h2 span{
+	color: var(--suc-col);
+}
+#some0 .conimg{
+	width: 40%;
+	position: relative;
+}
+#some0 .conimg img {
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	width: 80%;
+	height: 80%;
+	box-shadow: 0px 0px 50px 0px var(--suc-col);
+}
+#some1{
+	width: 100%;
+	height: 15rem;
+	margin: 5rem 0;
+	display: block;
+}
+#some1 .occ{
+	width: 100%;
+	padding: 0 3rem;
+	height: 85%;
+	display: flex;
+	justify-content: space-between;
+}
+#some1 .occ .card1{
+	width: 50%;
+	height: 100%;
+	background: linear-gradient(rgb(15, 15, 15), rgb(23, 23, 23));
+	margin-right: .5rem;
+	padding: 1rem;
+	transition: 500ms ease-in-out;
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+	overflow: hidden;
+}
+#some1 .occ .card1:hover, #some1 .occ .card2:hover{
+	border-bottom: .3rem solid var(--suc-col);
+	transform: translateY(-1rem);
+}
+#some1 .occ .card1 h3, #some1 .occ .card2 h3{
+	font-size: 3vw;
+	margin-bottom: 1.5rem;
+}
+#some1 .occ .card1 p, #some1 .occ .card2 p{
+	margin-bottom: .5rem;
+}
+#some1 .occ .card1 a, #some1 .occ .card2 a{
+	color: var(--text-col);
+}
+#some1 .occ .card2{
+	width: 50%;
+	height: 100%;
+	background: linear-gradient(rgb(15, 15, 15), rgb(23, 23, 23));
+	margin-left: .5rem;
+	padding: 1rem;
+	transition: 500ms ease-in-out;
+	border-top-left-radius: .5rem;
+	border-top-right-radius: .5rem;
+	overflow: hidden;
+}
+#some1 .occ .card2 p, #some1 .occ .card1 p{
+  text-overflow: ellipsis;
+}
+#some1 .more{
+	width: 100%;
+	height: 15%;
+	padding-top: 1rem;
+	padding-left: 4rem;
+}
+#some1 .more a{
+	color: var(--text-col);
+}
+#some2{
+	width: 100%;
+	height: 40rem;
+	background: var(--back-col);
+	margin: 5rem 0;
+	display: block;
+	overflow: hidden;
+}
+#some2 .part1{
+	padding: 1rem;
+	width: 100%;
+	height: 30%;
+	text-align: center;
+	display: block;
+}
+#some2 .part1 h2{
+	font-size: 4vw;
+	margin-bottom: 3rem;
+}
+#some2 .part1 h2 span{
+	color: var(--suc-col);
+}
+#some2 .part1 p{
+	padding: 0 4rem;
+}
+#some2 .part2{
+	width: 100%;
+	height: 70%;
+	display: flex;
+	padding: 0 2rem;
+	justify-content: space-between;
+	overflow: auto;
+}
+#some2 .part2 .car2, #some2 .part2 .car1{
+	width: 50%;
+	padding: 0 1.5rem;
+	margin: 0 1rem;
+	padding-top: 2rem;
+	height: 100%;
+	overflow: hidden;
+	background: linear-gradient(rgb(15, 15, 15), rgb(23, 22, 23));
+	border-bottom: .3rem solid var(--suc-col);
+}
+#some2 .part2 .car2 h3, #some2 .part2 .car1 h3{
+	font-size: 3vw;
+	margin-bottom: 2rem;
+}
+#some2 .part2 .car2 p, #some2 .part2 .car1 p{
+	margin-bottom: 1rem;
+}
+#some2 .part2 .car2 a, #some2 .part2 .car1 a{
+	color: var(--text-col);
+}
+#some2 .part2 .car2 img, #some2 .part2 .car1 img{
+	width: 100%;
+	height: 100%;
+}
+#some3{
+	width: 100%;
+	height: 30rem;
+	margin: 5rem 0;
+}
+#some3 .sec1{
+	width: 100%;
+	height: 30%;
+	padding: 1rem 2rem;
+}
+#some3 .sec1 h2{
+	font-size: 3vw;
+	text-align: center;
+}
+#some3 .sec1 h2 span{
+	color: var(--suc-col);
+}
+#some3 .sec2{
+	width: 100%;
+	height: 70%;
+	display: flex;
+	justify-content: space-between;
+}
+#some3 .sec2 .secpar1{
+	width: 40%;
+	height: 100%;
+	padding: 1rem;
+	padding-top: 3rem;
+}
+#some3 .sec2 .secpar2{
+	width: 60%;
+	height: 100%;
+}
+#some3 .sec2 .secpar1 .but-btn {
+	margin-top: 2rem;
+	display: flex;
+	padding-left: 1rem;
+}
+/* #some3 .sec2 .secpar1 .but-btn .gen{
+	margin-right: 3rem;
+} */
+#some3 .sec2 .secpar1 .but-btn .gen2{
+	width: 9rem;
+	height: 2.5rem;
+	background: var(--black-col);
+	border-radius: .5rem;
+	border: .1rem solid var(--suc-col);
+	display: flex;
+	color: var(--text-col);
+	justify-content: space-between;
+	padding-left: 1rem;
+	transition: 200ms ease-in-out;
+}
+#some3 .sec2 .secpar1 .but-btn .gen2:hover{
+	box-shadow: 5px 5px 5px 2px var(--suc-col);
+	border: none;
+}
+#some3 .sec2 .secpar1 .but-btn .gen2 span{
+	padding-top: .5rem;
+}
+#some3 .sec2 .secpar2 img{
+	width: 100%;
+	height: 100%;
+}
+#join{
+	width: 100%;
+	height: 12rem;
+	background: var(--black-col);
+	padding: 1rem 2rem;
+	display: flex;
+	margin: 5rem 0;
+	border-bottom: .3rem solid var(--suc-col);
+}
+#join .jon1{
+	width: 60%;
+	height: 100%;
+}
+#join .jon1 .jo-btn{
+	margin-top: 1rem;
+	margin-left: 2rem;
+	width: 7rem;
+	height: 2rem;
+	border-radius: .5rem;
+	background: var(--back-col);
+	color: var(--text-col);
+	border: .1rem solid var(--error-col);
+	transition: 500ms ease-in-out;
+}
+#join .jon1 .jo-btn:hover{
+	color: var(--suc-col);
+	box-shadow: 5px 5px 5px 2px var(--error-col);
+}
+#join .jon1 h3{
+	font-size: 3vw;
+}
+#join .jon1 h3 span{
+	color: var(--suc-col);
+}
+#join .jon2{
+	width: 40%;
+	height: 100%;
+	padding: 2rem;
+}
+/* footer */
+footer{
+	width: 100%;
+	height: 14rem;
+	margin-top: 1rem;
+	display: block;
+	border-bottom: .3rem solid var(--suc-col);
+	background: var(--black-col);
+}
+footer #foot1{
+	width: 100%;
+	padding-top: 1rem;
+	height: 80%;
+	display: flex;
+	justify-content: space-evenly;
+}
+footer #foot1 .cong {
+	width: 10rem;
+	margin-right: 1rem;
+}
+footer #foot1 .cong h3{
+	color: var(--text-col);
+	margin-bottom: 1rem;
+}
+footer #foot1 .cong p{
+	font-size: 1rem;
+	margin-bottom: .5rem;
+}
+footer #foot2{
+	width: 100%;
+	height: 20%;
+	text-align: center;
+}
+footer #foot2 p{
+	padding-top: 1rems;
+}
+/* footer ends */
+
+
+
+/*   media query  980login   */
+
+
+/*    media query ends    */

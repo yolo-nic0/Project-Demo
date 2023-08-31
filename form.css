@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two:wght@400;');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two:wght@400;');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: var(--font2-col);
+}
+body{
+	/* background: var(--back-col); */
+	font-family: sans-serif;
+	background-image: url('https://source.unsplash.com/random');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+:root{
+	--accent-col: #FFFFFF;
+	--black-col: #171617;
+	--back-col: #0f0f0f;
+	--suc-col: #A7ED6F;
+	--error-col: #EF6E6F;
+	--text-col: #FBFAFB;
+	--dimtext-col: #7B7A7B;
+	--prim1-col: #AF6EED;
+	--prim2-col: #CCA4F5;
+	--sec1-col: #C70557;
+	--sec2-col: #FA569C;
+	--font1-col: 'Space Grotesk', sans-serif;
+	--font2-col: 'Ubuntu', sans-serif;
+	--gradient-col: linear-gradient(to right top, #fa569c, #f057b1, #e15cc7, #cc64db, #af6eed);
+	--borderRadiusBtn-col: 83% 0% 75% 0% / 59% 79% 55% 77% ;
+}
+  
+body{
+	overflow: hidden;
+	position: relative;
+}  
+.big-main{
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(rgba(0, 0, 0, 0.3), transparent), url(assets/wallpaperflare.com_wallpaper.jpg);
+	background-position: center;
+	background-size: cover;
+}
+.over-lay{
+	width: 100%;
+	height: 100vh;
+	backdrop-filter: blur(1rem);
+	transition: 200ms ease-in-out;
+}
+.sign-up-form{
+	width: 30rem;
+	max-width: 80%;
+	height: 25rem;
+	background: linear-gradient(rgba(0, 0, 0, 0.7), transparent);
+	display: block;
+	position: absolute;
+	overflow: hidden;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 2rem;
+	padding-top: .5rem;
+	border-radius: 1rem;
+	border: .1rem solid var(--suc-col);
+	box-shadow: 0px 0px 70px 0px var(--suc-col);
+}
+.sign-up-form h1{
+	text-align: center;
+}
+.in-put{
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	margin-top: .5rem;
+}
+fieldset{
+	border: none;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	margin: .5rem;
+}
+label{
+	position: absolute;
+	left: 3%;
+	transition: 100ms;
+	color: var(--text-col);
+}
+input{
+	width: 14rem;
+	margin-top: .5rem;
+	height: 2rem;
+	border: none;
+	outline: none;
+	background: transparent;
+	/* transform: translateX(-50%); */
+	border-bottom: .3rem solid var(--back-col);
+}
+.cho{
+	border-bottom: none;
+}
+input:focus + label, input:valid + label{
+	transform: translateY(-.8rem);
+	font-size: .8rem;
+	color: var(--dimtext-col);
+}
+input:valid + label {
+	border-bottom: var(--suc-col);
+  }
+
+button{
+	width: 7rem;
+	height: 2rem;
+	margin-left: 50%;
+	transform: translateX(-50%);
+	background: var(--black-col);
+	border-radius: .5rem;
+	color: var(--text-col);
+	transition: 200ms ease-in-out;
+}
+button:hover{
+	border: .1rem solid var(--suc-col);
+	box-shadow: 5px 5px 5px 2px var(--suc-col);
+	color: var(--error-col);
+}
