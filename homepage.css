@@ -207,7 +207,12 @@ main{
 .contents .ass input:focus{
   border: .1rem solid var(--error-col);
 }
+.contents .ass img{
+  margin-top: .5rem;
+  width: 2rem;
+}
 .contents .code{
+  padding-top: 1rem;
   width: 100%;
   height: 100%;
   /* padding-right: 1rem; */
@@ -218,10 +223,6 @@ main{
   display: block;
   float: left;
   display: block;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-  border-bottom-left-radius: .5rem;
-  border-bottom-right-radius: .5rem;
 }
 
 /* code editor part */
@@ -232,6 +233,12 @@ main{
   background: lightgray;
   justify-content: space-between;
   padding: 0 1rem;
+}
+.contents .code .cod2{
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
 }
 
 .control-panel {
@@ -266,8 +273,9 @@ main{
 }
 .codeArea{
   resize: both;
-  height: 100%;
+  height: 90%;
   width: 100%;
+  overflow: hidden;
 }
 /* code editor ends here */
 
