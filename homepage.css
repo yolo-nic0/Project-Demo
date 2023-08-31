@@ -187,6 +187,7 @@ main{
   display: block;
   text-align: center;
   padding-top: .5rem;
+  margin-bottom: 1rem;
 }
 .contents .ass .h3{
   font-size: 2vw;
@@ -208,14 +209,14 @@ main{
   border: .1rem solid var(--error-col);
 }
 .contents .ass img{
-  margin-top: .5rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
   width: 2rem;
+  height: 2rem;
 }
 .contents .code{
-  padding-top: 1rem;
   width: 100%;
   height: 100%;
-  /* padding-right: 1rem; */
 }
 .contents .code .fing{
   width: 50%;
@@ -223,6 +224,20 @@ main{
   display: block;
   float: left;
   display: block;
+}
+.contents .code .cont{
+  width: 100%;
+  height: 100%;
+  display: block;
+  float: left;
+  display: block;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+  border: .1rem solid var(--suc-col);
+  padding: 0;
+  overflow: hidden;
 }
 
 /* code editor part */
@@ -235,11 +250,14 @@ main{
   padding: 0 1rem;
 }
 .contents .code .cod2{
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-  border-bottom-left-radius: .5rem;
-  border-bottom-right-radius: .5rem;
+  /* background: #57a958; */
+  padding: .5rem;
 }
+.contents .code .cod1{
+  /* background: #e48d0a; */
+  padding: .5rem;
+}
+
 
 .control-panel {
   text-align: left;
@@ -250,30 +268,48 @@ main{
 .languages {
   background: white;
   border: 1px solid gray;
+  border-radius: .5rem;
 }
 
 #editor { 
   height: 100%;
   width: 100%;
-  font-size: 2vw;
+  font-size: 1vw;
 }
 
 .btn {
   background: #57a958;
   color: white;
   padding: 8px;
-  border: 0;
+  width: 4rem;
+  height: 1.5rem;
+  padding-bottom: .5rem;
+  padding-top: 0;
+  margin-top: .2rem;
+  border-radius: .5rem;
+  border: .1rem solid var(--suc-col);
+}
+.btn img{
+  width: 1rem;
 }
 
-.output {
+.cont2 {
       padding: 4px;
       background:  gray;
       height: 100%;
       width: 100%;
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+      border-bottom-left-radius: .5rem;
+      border-bottom-right-radius: .5rem;
+      border: .1rem solid var(--suc-col);
+    }
+.cont2 .output {
+  height: 100%;
+  width: 100%;
 }
 .codeArea{
-  resize: both;
-  height: 90%;
+  height: calc(100% - 2rem);
   width: 100%;
   overflow: hidden;
 }
@@ -316,7 +352,7 @@ main{
 @media (width <= 750px){
   .sidebar.is-active + .contents{
       width: 100%;
-      z-index: -10;
+      z-index: -1;
   }
   .sidebar.is-active + .sidebar{
       z-index: 10;
