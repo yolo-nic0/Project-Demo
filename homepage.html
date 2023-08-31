@@ -29,7 +29,7 @@
         </div>
     </header>
     <main>
-        <div class="sidebar is-active">
+        <div class="sidebar">
             <div class="sidebar-content">
               <input type="search" placeholder="Search">
               
@@ -41,31 +41,37 @@
         <div class="contents">
             <div class="ass">
               <h3>Ask any thing the AI assistant</h3>
-              <div class="search"><input type="search" placeholder="Enter a prompt here"></div>
+              <div class="search">
+                <input type="search" placeholder="Enter a prompt here">
+                <button><img src="assets/icons8-navigation-1001.png" alt=""></button>
+              </div>
             </div>
             <div class="code">
                 <div class="cod1 fing">
-                  <div class="functions">
-                    <button class="btn" onclick="executeCode()"> Run </button>
-
-                    <div class="control-panel">
-                      <!-- Select Language:
-                      &nbsp; &nbsp; -->
-                      <select id="languages" class="languages" onchange="changeLanguage()">
-                          <option value="c"> C </option>
-                          <option value="cpp"> C++ </option>
-                          <option value="php"> PHP </option>
-                          <option value="python"> Python </option>
-                          <option value="node"> Node JS </option>
-                      </select>
+                  <div class="cont">
+                    <div class="functions">
+                      <button class="btn" onclick="executeCode()"> Run <img src="assets/icons8-play-643.png" alt=""></button>
+                      <div class="control-panel">
+                        <!-- Select Language:
+                        &nbsp; &nbsp; -->
+                        <select id="languages" class="languages" onchange="changeLanguage()">
+                            <option value="c"> C </option>
+                            <option value="cpp"> C++ </option>
+                            <option value="php"> PHP </option>
+                            <option value="python"> Python </option>
+                            <option value="node"> Node JS </option>
+                        </select>
+                      </div>
                     </div>
-                        </div>
-                  <div class="codeArea">
-                    <div class="editor" id="editor"></div>
+                    <div class="codeArea">
+                      <div class="editor" id="editor">// Your code goes here. Happy coding.</div>
+                    </div>
                   </div>
                 </div>
                 <div class="cod2 fing">
-                  <div class="output"></div>
+                  <div class="cont2">
+                    <div class="output"></div>
+                  </div>
                 </div>
             </div>
         </div>  
