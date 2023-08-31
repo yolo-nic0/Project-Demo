@@ -209,10 +209,13 @@ main{
   border: .1rem solid var(--error-col);
 }
 .contents .ass img{
-  margin-top: 1rem;
-  margin-left: 1rem;
   width: 2rem;
   height: 2rem;
+}
+.contents .ass button{
+  margin-left: 1rem;
+  background: transparent;
+  border: 0;
 }
 .contents .code{
   width: 100%;
