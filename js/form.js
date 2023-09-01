@@ -87,6 +87,7 @@ submitButton.addEventListener("click", () => {
 });
 
 
+//another way geting the input and posting it with axios
 // Import axios
 import axios from 'axios';
 
