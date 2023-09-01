@@ -21,11 +21,20 @@
           <div class="hamburger-btn"></div>
           <div class="logo"><h3><span>T</span>ech<span>F</span>renzy</h3></div>
         </div>
-        <div class="nav-right">
-          <div class="profile">
-            <img src="assets/wallpaperflare.com_wallpaper.jpg" alt="">
+        <div class="nav-middle">
+          <button class="btn" onclick="executeCode()"> Run <img src="assets/icons8-play-643.png" alt=""></button>
+        </div>
+        <div class="dropdown" data-dropdown>
+          <div class="profile" data-dropdown-button>
           </div>
-          <h3>User name</h3>
+          <div class="dropdown-menu">
+            <div class="dropdown-contents">
+              <a href="#">Home</a>
+              <a href="#">Profile</a>
+              <a href="#">Settings</a>
+              <a href="#">Help?</a>
+              <button>Log Out</button></div>
+          </div>
         </div>
     </header>
     <main>
@@ -39,38 +48,38 @@
 
 
         <div class="contents">
-            <div class="ass">
-              <h3>Ask any thing the AI assistant</h3>
-              <div class="search">
-                <input type="search" placeholder="Enter a prompt here">
-                <button><img src="assets/icons8-navigation-1001.png" alt=""></button>
-              </div>
-            </div>
             <div class="code">
                 <div class="cod1 fing">
                   <div class="cont">
                     <div class="functions">
-                      <button class="btn" onclick="executeCode()"> Run <img src="assets/icons8-play-643.png" alt=""></button>
                       <div class="control-panel">
-                        <!-- Select Language:
-                        &nbsp; &nbsp; -->
                         <select id="languages" class="languages" onchange="changeLanguage()">
                             <option value="c"> C </option>
                             <option value="cpp"> C++ </option>
                             <option value="php"> PHP </option>
                             <option value="python"> Python </option>
                             <option value="node"> Node JS </option>
+                            <option value="django"> Django </option>
+                            <option value="flutter"> Flutter </option>
+                            <option value="html"> Html </option>
+                            <option value="css"> CSS</option>
+                            <option value="javascript"> JavaScript </option>
+
+
                         </select>
                       </div>
                     </div>
                     <div class="codeArea">
-                      <div class="editor" id="editor">// Your code goes here. Happy coding.</div>
+                      <div class="editor" id="editor">// Your code goes here. Happy coding. (allways clear message before use)</div>
                     </div>
                   </div>
                 </div>
                 <div class="cod2 fing">
                   <div class="cont2">
-                    <div class="output"></div>
+                    <div class="functions"></div>
+                    <div class="output">
+                      
+                    </div>
                   </div>
                 </div>
             </div>
