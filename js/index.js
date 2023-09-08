@@ -1,6 +1,38 @@
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const closeModalButtons = document.querySelectorAll('[data-close-button]')
 const overlay = document.getElementById('over-lay')
+const menu = document.getElementById('menu')
+
+menu.onclick = function (){
+  menu.classList.toggle('openmenu')
+}
+
+document.addEventListener("click", e => {
+  const isDropdownButton = e.target.matches("[data-dropdown-button]")
+  if (!isDropdownButton && e.target.closest('[data-dropdown]') != null) return
+
+  let currentDropdown
+  if (isDropdownButton) {
+      currentDropdown = e.target.closest('[data-dropdown]')
+      currentDropdown.classList.toggle("active")
+  }
+
+  document.querySelectorAll("[data-dropdown].avtive").forEach(dropdown => {
+      if (dropdown === currentDropdown) return
+      dropdown.classList.remove('acitve')        
+  })
+})
+
+const dropdown = document.querySelector(".dropdown");
+
+document.addEventListener("click", (event) => {
+if (event.target !== dropdown && !dropdown.contains(event.target)) {
+  dropdown.classList.remove("active");
+}
+})
+
+
+
 
 openModalButtons.forEach(button => {
   button.addEventListener('click', () => {

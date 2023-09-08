@@ -233,8 +233,52 @@ nav .auth .mango:hover{
 nav .menu{
     display: none;
     width: 2rem;
+	background: #C70557;
+	flex-direction: column;
+	padding-top: .7rem;
+	position: relative;
 }
-/* nav design ends */
+nav .menu .but{
+	width: 100%;
+	height: .5rem;
+	background: #A7ED6F;
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+	border-bottom-left-radius: 1rem;
+	border-bottom-right-radius: 1rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+nav .menu .li1{
+	transform: translate(-50%, -1rem);
+}
+nav .menu .li3{
+	transform: translate(-50%, .5rem);
+}
+.active .li1{
+	transform: translate(-50%, -50%) rotate(-45deg);
+}
+.active .li3{
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+.active .li2{
+width: 0;
+}
+  
+@media (width <= 400px){
+	nav .sider{
+		display: none;
+	}
+	nav .navigation{
+		display: none;
+	}
+	nav .menu{
+		display: flex;
+	}
+  }
+  /* nav design ends */
 
 /* Content Designing */
 main{

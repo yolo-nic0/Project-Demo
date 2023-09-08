@@ -126,7 +126,7 @@ header{
   background: var(--error-col);
   color: var(--back-col);
 }
-.hamburger-btn {
+/* .hamburger-btn {
     width: 2.5rem;
     height: 2.5rem;
     background: url(assets/icons8-side-pane-96.png);
@@ -135,7 +135,7 @@ header{
     border: none;
     cursor: pointer;
     margin-left: .5rem;
-  }
+  } */
   
 /* designing the header ends here */
 /* designing the main section */
